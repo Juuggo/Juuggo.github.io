@@ -1,0 +1,6 @@
+.post-container{
+    width:calc(100% - 250px);
+    height:calc(100% - 110px);
+    position:absolute;
+    top:110px;
+}

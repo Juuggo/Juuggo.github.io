@@ -1,0 +1,32 @@
+nav{
+    width:250px;
+    height:calc(100% - 100px);
+    position:fixed;
+    right:0px;
+    top:0px;
+    border-left:1px solid #b9c49f;
+    transition:.5s;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+nav.closed{
+    transform:translateX(300px);
+}
+nav .menu{
+    position:absolute;
+    bottom:0px;    
+    left:0;
+    right:0;
+    width:150px;
+    margin:auto;
+    margin-bottom:2em;
+    list-style-type:none;
+}
+nav li{
+    line-height:2em;
+    color:#b9c49f;
+}
+li:hover{
+    color:#0f0f0f;
+    cursor:pointer;
+}
