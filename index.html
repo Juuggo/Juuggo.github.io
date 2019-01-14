@@ -1,13 +1,22 @@
 ---
 layout: default
 ---
-<div class="post-container">
+<div class="main-post-list">
     {% for post in site.posts %}
-    {% include post-info.html %}
-    <div class="post-container__title">
-        <h2 class="post-container__title">
-            <a href="{{ post.url }}" title="Read {{ post.title}}">{{ post.title }}</a>
-        </h2>
-    </div>
+    <section class="main-post-list__container">
+        <div class="post-info">
+            <div class="post-info__date">{{ post.date }}</div>
+            <div class="post-info__description">
+                <p>{{ post.tags }}</p>
+                <p class="post-info__excerpt">{{ post.content }}</p>
+                <a class="read_more" href="{{ post.url }}">read more</a>
+            </div>
+        </div>
+        <div class="main-post-list__title">
+            <h2>
+                <a href="{{ post.url }}" title="Read {{ post.title}}">{{ post.title }}</a>
+            </h2>
+        </div>
+    </section>
     {% endfor %}
 </div>
