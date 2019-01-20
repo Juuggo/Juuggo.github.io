@@ -1,14 +1,17 @@
 .header-container{
-    position:fixed;
+    position:absolute;
     top:0px;
     width:100%;
-    height:110px;
+    height:150px;
     background:var(--ui_bgyellow);
 }
-.header-container header{
-    display:block;
-    width:400px;
+header{
+    max-width:400px;
     margin:auto;
-    padding:1em;
+    padding-top:30px;
+    box-sizing:border-box;
     text-align:center;
+}
+header h1{
+    margin:.5rem;
 }

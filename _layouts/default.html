@@ -3,10 +3,11 @@
 {% include head.html %}
 
 <body>
-    <div class="content-wrapper">
         {% include logo.html %}
-        {% include navigation.html %}
         {{ content }}
-    </div>
+        {% include navigation.html %}
+    <script type="text/javascript" src="/js/navigation.js"></script>
+    <script type="text/javascript" src="/js/helper.js"></script>
+    <script type="text/javascript" src="/js/ScrollPage.js"></script>
 </body>
 </html>

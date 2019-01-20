@@ -2,27 +2,5 @@
 layout: default
 ---
 <main>
-<div class="scrollPage-container">
-    <div class="main-post-list" id="all-pages">
-        {% for post in site.posts %}
-        <section class="main-post-list__container page">
-            <div class="text-container">
-                <div class="post-info">
-                    <div class="post-info__date">{{ post.date }}</div>
-                    <div class="post-info__description ">
-                        <p>{{ post.tags }}</p>
-                        <p class="post-info__excerpt">{{ post.content }}</p>
-                        <a class="read_more" href="{{ post.url }}">read more</a>
-                    </div>
-                </div>
-                <div class="main-post-list__title ">
-                    <h2>
-                        <a href="{{ post.url }}" title="Read {{ post.title}}">{{ post.title }}</a>
-                    </h2>
-                </div>
-            </div>
-        </section>
-        {% endfor %}
-    </div>
-</div>
+{% include main-post-list.html %}
 </main>
