@@ -1,0 +1,12 @@
+<div class="scrollPage-container">
+    <div class="main-post-list" id="all-pages">
+        {% for post in site.posts %}
+        <section class="page">
+            <div class="text-container">
+                {% include post-info.html %}
+                {% include post-title.html %}
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+</div>
