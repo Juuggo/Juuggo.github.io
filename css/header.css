@@ -1,5 +1,5 @@
 .header-container{
-    position:absolute;
+    position:fixed;
     top:0px;
     width:100%;
     height:150px;
@@ -14,4 +14,8 @@ header{
 }
 header h1{
     margin:.5rem;
+    color:var(--ui_grey);
+}
+header p{
+    color:var(--ui_smoke);
 }

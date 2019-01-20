@@ -1,5 +1,5 @@
 @import "navigation.css";
-@import "logo.css";
+@import "header.css";
 @import "main-post-list.css";
 
 html,
@@ -21,5 +21,5 @@ body{
 main{
     position:absolute;
     top:150px;
-    width:calc(100vw - 250px);
+    width:calc(100vw - 200px);
 }

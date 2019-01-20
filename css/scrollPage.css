@@ -3,10 +3,9 @@
     top:0;
     width:100%;
     transition:all 800ms ease;
-    /* height set by js */
 }
 .page{
-    /* height:100%; */
+    /* height set by js */
     width:100%;
 }
 .text-container{

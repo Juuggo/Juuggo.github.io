@@ -1,13 +1,13 @@
 nav{
-    width:250px;
+    width:200px;
     height:calc(100% - 100px);
     position:fixed;
     right:0px;
     top:0px;
     border-left:1px solid #b9c49f;
-    transition:.5s;
     margin-top:50px;
     margin-bottom:50px;
+    transition:all 1s ease-out;
 }
 nav.closed{
     transform:translateX(300px);
@@ -18,15 +18,16 @@ nav .menu{
     left:0;
     right:0;
     width:150px;
-    margin:auto;
+    margin-left:20px;
     margin-bottom:2em;
     list-style-type:none;
 }
 nav li{
-    line-height:2em;
-    color:#b9c49f;
+    color:var(--ui_green);
+    font-size:1.2rem;
+    line-height:2.5rem;
 }
 li:hover{
-    color:#0f0f0f;
+    color:var(--ui_grey);
     cursor:pointer;
 }

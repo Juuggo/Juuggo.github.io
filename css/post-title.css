@@ -1,17 +1,16 @@
 .post-title{
     height:100%;
     overflow:hidden;
-    margin-left:5vw;
 }
-.post-title>h2{
-    font-size:5vh;
+.post-title h2{
+    font-size:8vh;
     position:absolute;
-    top:0;
+    top:15%;
+    margin-left:10%;
     text-transform:uppercase;
 }
-.post-title>h2:nth-child(2){
-    font-size:5vh;
-    height:5vh;
+.post-title h2:nth-child(2){
+    height:8vh;
     overflow:hidden;
     color:var(--ui_red);
     background:var(--ui_bgyellow);
