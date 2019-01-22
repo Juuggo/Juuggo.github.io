@@ -26,9 +26,11 @@ main{
 }
 .deer-container{
     position:fixed;
-    right:calc(200px + 8vw);
+    right:200px;
     bottom:30px;
     width:32vh;
     height:37vh;
-    --arr_size:10px;
+    max-width:32vw;
+    max-height:37vw;
+    --arr_size:2vh;
 }

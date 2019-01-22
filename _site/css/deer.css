@@ -1,4 +1,8 @@
 .deer-container{
+    /* set those property first: 
+     * width, height, --arr_size
+     * keep the width : height = 32 : 37
+     */
     position:relative;
     overflow:hidden;
 }
@@ -10,7 +14,6 @@
 .deer-container p,
 .deer-container p::before,
 .deer-container p::after{
-    /* display:block; */
     content:"";
     margin:0;
     padding:0;

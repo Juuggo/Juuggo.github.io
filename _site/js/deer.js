@@ -1,5 +1,6 @@
 class Deer {
-    constructor() {
+    constructor(action) {
+        this.action = action;
         this.walkNodes=new Array('lhand', 'rhand', 'lfoot', 'rfoot','arrdown1', 'arrdown2');
         this.pressNodes=new Array('deer','rhand','lhand','lfoot','rfoot','arrleft1','arrleft2','arrright1','arrright2');
     }
@@ -45,24 +46,42 @@ class Deer {
             this.stopPress('right');
             this.stopWalk();
     }
-    // document.addEventListener('DOMContentLoaded', function(event) {
+    walkAnimation() {
+        this.stopAllAnimation();
+        this.startWalk();
+        this.timeOutId = setTimeout(() => {this.stopWalk()}, 2000);
+    }
     init() {
-        document.getElementById('walkbtn').onclick = (event) => {
-            this.stopAllAnimation();
-            this.startWalk();
-            this.timeOutId = setTimeout(() => {this.stopWalk()}, 2000);
-        }
-        document.getElementById('leftbtn').onclick = () => {
-            this.stopAllAnimation();
-            setTimeout(() => {this.startPress('left')}, 20);
-        }
-        document.getElementById('rightbtn').onclick = () => {
-            this.stopAllAnimation();
-            setTimeout(() => {this.startPress('right')}, 20);
+        let handleWalkBtnClick = helper.throttle(() => {
+            this.walkAnimation();
+            mainPostList.scrollDown();
+        }, 500, this);
+        console.log(handleWalkBtnClick);
+        switch (this.action) {
+            case 'walk':
+                document.getElementById("arrsleft").style.display = 'none';
+                document.getElementById("arrsright").style.display = 'none';
+                document.getElementById("arrsdown").style.display = 'block';
+                document.getElementById('walkbtn').onclick = handleWalkBtnClick;
+                break;
+            case 'press':
+                document.getElementById("arrsleft").style.display = 'block';
+                document.getElementById("arrsright").style.display = 'block';
+                document.getElementById("arrsdown").style.display = 'none';
+                document.getElementById('leftbtn').onclick = () => {
+                    this.stopAllAnimation();
+                    setTimeout(() => {this.startPress('left')}, 20);
+                }
+                document.getElementById('rightbtn').onclick = () => {
+                    this.stopAllAnimation();
+                    setTimeout(() => {this.startPress('right')}, 20);
+                }
+                break;
+            default:
+                console.log("Incorrect 'action' argument.");
         }
     }
-    // });
 }
 
-var d = new Deer;
-d.init();
+var deerHomepage = new Deer('walk');
+deerHomepage.init();
