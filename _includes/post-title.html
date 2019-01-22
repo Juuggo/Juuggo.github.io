@@ -1,4 +1,9 @@
 <div class="post-title">
-    <h2>{{ post.title }}</h2>
-    <h2>{{ post.title }}</h2>
+    {% assign splitedTitle = {{post.title-split}} | split:" / " %}
+    <h2>
+    {% for words in splitedTitle %}
+        {{ words }}<br />
+    {% endfor %}
+    </h2>
+    <h2>{{ splitedTitle[0] }}</h2>
 </div>
