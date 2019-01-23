@@ -2,6 +2,7 @@
 @import "header.css";
 @import "main-post-list.css";
 @import "deer.css";
+@import "footer.css";
 
 html,
 body{
@@ -30,5 +31,5 @@ main{
     bottom:30px;
     width:32vh;
     height:37vh;
-    --arr_size:10px;
+    --arr_size:20px;
 }

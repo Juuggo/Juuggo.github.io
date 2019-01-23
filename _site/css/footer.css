@@ -1,0 +1,28 @@
+footer{
+    position:fixed;
+    width:100%;
+    bottom:0;
+    background:var(--ui_green);
+    transform:translateY(50%);
+    transition:all .5s ease;
+} 
+footer:hover{
+    transform:translateY(0);
+}
+div.footer-text{
+    text-align:center;
+    line-height:2rem;
+}
+.footer-text p,
+.footer-text p:hover,
+.footer-text p:visited{
+    color:var(--ui_bgyellow);
+    text-decoration:none;
+}
+.footer-text span,
+.footer-text a,
+.footer-text a:hover,
+.footer-text a:visited{
+    color:var(--ui_bgyellow);
+    text-decoration:underline;
+}
