@@ -1,4 +1,8 @@
 .deer-container{
+    /* set those property first: 
+     * width, height, --arr_size
+     * keep the width : height = 32 : 37
+     */
     position:relative;
     overflow:hidden;
 }
@@ -10,7 +14,6 @@
 .deer-container p,
 .deer-container p::before,
 .deer-container p::after{
-    /* display:block; */
     content:"";
     margin:0;
     padding:0;
@@ -57,11 +60,11 @@ button::-moz-focus-inner{
     border-top:var(--arr_size) solid #f7f0e5;
 }
 .walk_arrdown2{
-    animation:arrow_scrolldown .5s linear infinite;
+    animation:arrow_scrolldown 400ms linear infinite;
 }
 .walk_arrdown1{
     top:0;
-    animation:arrow_scrolldown .5s .25s linear infinite;
+    animation:arrow_scrolldown 400ms 200ms linear infinite;
 }
 @keyframes arrow_scrolldown {
     0%{
@@ -79,9 +82,10 @@ button::-moz-focus-inner{
     }
 }
 #walkbtn{
-    left:calc(0px - var(--arr_size) / 2);
-    width:calc(var(--arr_size) * 3);
-    height:calc(var(--arr_size) * 2);
+    left:calc(0px - var(--arr_size) * 2);
+    top:calc(0px - var(--arr_size) * 10);
+    width:calc(var(--arr_size) * 6);
+    height:calc(var(--arr_size) * 14);
 }
 /*left buttons*/
 #leftbtn{
@@ -361,12 +365,12 @@ button::-moz-focus-inner{
 .walk_rhand{
     transform:rotate(20deg);
     height:70%;
-    animation:hand_r 1s ease-in-out infinite;
+    animation:hand_r 800ms ease-in-out infinite;
 }
 .walk_lhand{
     transform:rotate(-20deg);
     height:70%;
-    animation:hand_l 1s ease-in-out infinite;
+    animation:hand_l 800ms ease-in-out infinite;
 }
 @keyframes hand_r{
     25%{
@@ -417,12 +421,12 @@ button::-moz-focus-inner{
 .walk_rfoot{
     transform-origin:left top;
     transform:rotate(0deg);
-    animation:foot_r 1s ease-in-out infinite;
+    animation:foot_r 800ms ease-in-out infinite;
 }
 .walk_lfoot{
     transform-origin:right top;
     transform:rotate(0deg);
-    animation:foot_l 1s ease-in-out infinite;
+    animation:foot_l 800ms ease-in-out infinite;
 }
 @keyframes foot_r{
     0%{
@@ -540,12 +544,12 @@ button::-moz-focus-inner{
         height:62%;
     }
 }
-.hover_arrsdown:hover{
+#arrsdown.hover:hover{
     animation: bounce_down 1s ease infinite;
 }
-.hover_arrsleft:hover{
+#arrsleft.hover:hover{
     animation: bounce_left 1s ease infinite;
 }
-.hover_arrsright:hover{
+#arrsright.hover:hover{
     animation: bounce_right 1s ease infinite;
 }

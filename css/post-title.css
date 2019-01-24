@@ -1,17 +1,25 @@
 .post-title{
-    height:100%;
-    overflow:hidden;
+    position:relative;
+    top:10%;
+    margin-left:10%;
 }
 .post-title h2{
-    font-size:4vw;
-    position:absolute;
-    top:15%;
-    margin-left:10%;
+    font-family:teko-regular;
+    font-size:7vh;
+    line-height:7vh;
     text-transform:uppercase;
+    transform-origin:top left;
 }
 .post-title h2:nth-child(2){
-    height:4vw;
-    overflow:hidden;
+    position:absolute;
+    top:0;
     color:var(--ui_red);
     background:var(--ui_bgyellow);
+}
+.post-excerpt{
+    color:var(--ui_smoke);
+    position:relative;
+    width:calc(100% - 32vh);
+    font-size:2.5vh;
+    margin-top:1em;
 }

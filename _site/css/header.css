@@ -13,8 +13,8 @@ header{
     text-align:center;
 }
 header h1{
-    margin:.5rem;
     color:var(--ui_grey);
+    font-family:teko-light;
 }
 header p{
     color:var(--ui_smoke);

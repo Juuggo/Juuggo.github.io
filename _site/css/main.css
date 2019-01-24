@@ -1,8 +1,20 @@
 @import "navigation.css";
 @import "header.css";
-@import "main-post-list.css";
+@import "post-info.css";
+@import "scrollPage.css";
+@import "post-title.css";
 @import "deer.css";
 @import "footer.css";
+@import "hover-links.css";
+
+@font-face{
+    font-family:'teko-regular';
+    src:url('/assets/fonts/teko-regular.ttf');
+}
+@font-face{
+    font-family:'teko-light';
+    src:url('/assets/fonts/teko-light.ttf');
+}
 
 html,
 body{
@@ -27,9 +39,32 @@ main{
 }
 .deer-container{
     position:fixed;
-    right:calc(200px + 8vw);
-    bottom:30px;
+    right:200px;
+    bottom:100px;
     width:32vh;
     height:37vh;
-    --arr_size:20px;
+    max-width:32vw;
+    max-height:37vw;
+    --arr_size:2vh;
+}
+
+.scrollPage-container{
+    position:absolute;
+    left:0px;
+    height:calc(100vh - 250px);
+    width:calc(100vw - 200px);
+    overflow:hidden;
+}
+#main-post-list .text-container{
+    position:relative;
+    width:100%;
+    height:calc(100% - 250px);
+    display:flex;
+}
+.post-intro-container{
+    flex:1;
+}
+.post-info-container{
+    width:200px;
+    margin-left:50px;
 }

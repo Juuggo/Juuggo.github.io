@@ -17,10 +17,11 @@ class ScrollPages {
     }
     scrollDown() {
         if (this.currentPageNumber !== this.totalPageNumber){
+            deerHomepage.walkAnimation();
             this.pages.style.top = (-this.viewHeight * this.currentPageNumber) + 'px';
             this.currentPageNumber++;
             this.updatePageMap();
-            this.textFadeInOut();
+            this.textAnimation();
         }
     }
     scrollUp() {
@@ -28,7 +29,7 @@ class ScrollPages {
             this.pages.style.top = (-this.viewHeight * (this.currentPageNumber - 2)) + 'px';
             this.currentPageNumber--;
             this.updatePageMap();
-            this.textFadeInOut();
+            this.textAnimation();
         }
     }
     scrollTo(targetPageNumber) {
@@ -45,7 +46,7 @@ class ScrollPages {
         pageMapContainer.className = 'page-map-container';
         this.pageMapParent.appendChild(pageMapContainer);
         for(let i=0; i < this.totalPageNumber; i++) {
-            pageMapContainer.innerHTML += '<p class="page-map"><span></span></p>';
+            pageMapContainer.innerHTML += '<p class="page-map hover"><span></span></p>';
         }
         this.pageMap = document.getElementsByClassName('page-map');
         this.setPageMapHeight();
@@ -81,7 +82,7 @@ class ScrollPages {
         this.pages.style.top = -this.viewHeight * (this.currentPageNumber-1) + 'px';
         this.setPageMapHeight();
     }
-    textFadeInOut() {
+    textAnimation() {
         const containersDom = document.getElementsByClassName('text-container');
         let textContainers = Array.prototype.slice.call(containersDom);
         textContainers.forEach((e) => {
@@ -97,11 +98,10 @@ class ScrollPages {
             this.pageDoms[i].style.height = this.viewHeight + 'px';
         }
         this.createPageMap();
-        this.textFadeInOut();
         if (navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
             document.addEventListener('wheel', handleMouseWheel);
         } else {
-            document.addEventListener('DOMMouseScroll', hadleMouseWheel);
+            document.addEventListener('DOMMouseScroll', handleMouseWheel);
         }
         document.addEventListener('touchstart', (event) => {
             this.startY = event.touches[0].pageY;
@@ -124,8 +124,10 @@ class ScrollPages {
 
 document.addEventListener('DOMContentLoaded', function() {
     let allPages = document.getElementById('main-post-list');
+    console.log(allPages);
     let totalPageNumber = document.getElementsByClassName('page').length;
     let pageMapParent = document.getElementsByTagName('nav')[0];
     mainPostList = new ScrollPages(totalPageNumber, allPages, pageMapParent);
+    console.log(mainPostList);
     mainPostList.init();
 })

@@ -1,12 +1,9 @@
 <div class="post-info">
     <p class="post-date">{{ post.date | date_to_string }}</p>
-    <div class="post-description">
-        <p class="post-tag">
-            {% for tag in post.tags %}
-            #{{ tag }} 
-            {% endfor %}
-        </p>
-        <div class="post-excerpt">{{ post.excerpt }}</div>
-        <a class="read-more" title="Read {{post.title}}"href="{{ post.url }}">Read more</a>
-    </div>
+    <ul class="post-tag">
+        {% for tag in post.tags %}
+        <li><a href="" class="hover">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+    <a class="read-more hover" href="{{ post.url }}">Read more</a>
 </div>

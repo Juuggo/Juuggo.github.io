@@ -1,0 +1,26 @@
+a.hover{
+    position:relative;
+    overflow:hidden;
+}
+a.hover:hover{
+    z-index:0;
+    color:var(--ui_bgyellow);
+    text-decoration:none;
+}
+a.hover::after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:var(--ui_green);
+    transition:transform .3s ease-out;
+    transform-origin:top left;
+    transform:scaleX(0);
+    z-index:-1;
+}
+a.hover:hover::after{
+    transform:scaleX(1);
+}
