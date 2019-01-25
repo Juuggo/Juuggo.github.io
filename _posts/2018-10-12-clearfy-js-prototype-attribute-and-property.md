@@ -2,12 +2,15 @@
 layout: post
 tags: [ex, quas, petentium]
 title-split: clearfy / js prototype attribute / and property 
+toc: true
 ---
 Introduction.
+Lorem ipsum dolor sit amet, tamquam voluptua accommodare qui ne. Prima dicunt saperet duo ei, est dolor dissentias ut, ut possim percipit ius. Eu mea mucius virtute. Eloquentiam contentiones cum ut, vim at apeirian constituam, sanctus fabellas percipitur est an. Qui mucius noster constituam ut, ne tation tamquam accusata pro, per ex quas petentium. Errem apeirian et eum, cum an facete eruditi, est an homero dictas facilisi.
 
-## prototype property v.s. prototype attribute
-### prototype property
-every JavaScript function has a prototype property
+
+# prototype property v.s. prototype attribute
+## prototype property
+every JavaScript function has a prototype property.
 The prototype property is empty by default.
 Attach properties and methods on this prototype property when you want to implement inheritance. Those properties and methods will be avaliable to instance of that function.
 
@@ -19,7 +22,7 @@ var newObj = new PrintStuff ();
 ```
 Properties and methods of `PrintStuff.prototype` will be inherited to `newObj`.
 
-## prototype attribute (also referred to as the __prototype object__, "parent", or just __prototype__)
+# prototype attribute (also referred to as the prototype object, "parent", or just prototype)
 When create a new object, the prototype object is set automatically.
 All object inherits properties from its prototype object/attribute.
 
@@ -38,7 +41,7 @@ All built-in constructors (`Array ()`, `Number ()`, `String ()`, etc.) were crea
 # Useness of prototype
 Prototype Property: Inheritance of properties and methods
 e.g.
-```
+```javascript
 function Plant () {}
 Plant.prototype.property1 = function () {}
 function Fruit () {}
@@ -63,11 +66,14 @@ To access an object’s prototype property.
 `__proto__` also contains an object’s prototype object.
 all objects that inherit from another object also inherit a `constructor` property. 
 e.g.
-```
+```javascript
 var myObj = new Object ();
 console.log(myObj.constructor); // Object()
 
 var userAccount = new Account (); 
 console.log(userAccount.constructor); // Account()
 ```
-Reference: [JavaScript Prototype in Plain Language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
+
+***
+# Reference
+[JavaScript Prototype in Plain Language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)

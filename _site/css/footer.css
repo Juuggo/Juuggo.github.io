@@ -14,12 +14,13 @@ div.footer-text{
     top:0;
     width:100%;
     text-align:center;
-    font-size:1rem;
 }
 .footer-text p{
     color:var(--ui_bgyellow);
     text-decoration:none;
+    font-size:1rem;
     line-height:2rem;
+    margin:0;
 }
 .footer-text span,
 .footer-text a{

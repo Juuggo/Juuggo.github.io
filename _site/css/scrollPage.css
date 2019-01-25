@@ -37,6 +37,7 @@
     /* height set by js */
     right:0;
     cursor:pointer;
+    margin:0;
 }
 .page-map span{
     display:block;

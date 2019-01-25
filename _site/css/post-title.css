@@ -4,11 +4,13 @@
     /* margin-left:10%; */
 }
 .post-title h2{
+    color:black;
     font-family:teko-regular;
     font-size:7vh;
     line-height:7vh;
     text-transform:uppercase;
     transform-origin:top left;
+    margin:0;
 }
 .post-title h2:nth-child(2){
     position:absolute;
