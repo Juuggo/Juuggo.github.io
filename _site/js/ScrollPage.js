@@ -6,6 +6,7 @@ class ScrollPages {
         this.pageMapParent = pageMapParent;
         this.viewHeight = document.documentElement.clientHeight;
         this.pageDoms = document.getElementsByClassName('page');
+        this.textContainers = document.getElementsByClassName('text-container');
     }
     mouseScroll(event) {
         let delta = helper.getDelta(event);
@@ -83,17 +84,17 @@ class ScrollPages {
         this.setPageMapHeight();
     }
     textAnimation() {
-        const containersDom = document.getElementsByClassName('text-container');
-        let textContainers = Array.prototype.slice.call(containersDom);
-        textContainers.forEach((e) => {
-            e.classList.remove('in-sight');
-        });
-        let textContainerInSight = textContainers[this.currentPageNumber-1];
-        textContainerInSight.classList.add('in-sight')
+        for (let j=0; j<this.textContainers.length; j++) {
+            this.textContainers[j].classList.remove('in-sight');
+        };
+        let textContainerInSight = this.textContainers[this.currentPageNumber-1];
+        textContainerInSight.classList.add('in-sight');
     }
     init() {
+        this.textContainers[0].classList.add('in-sight');
         let handleMouseWheel = helper.throttle(this.mouseScroll, 500, this);
         let handleResize = helper.debounce(this.resize, 500, this);
+        console.log(this.textContainers[0]);
         for (let i=0; i<this.totalPageNumber; i++) {
             this.pageDoms[i].style.height = this.viewHeight + 'px';
         }
@@ -124,10 +125,8 @@ class ScrollPages {
 
 document.addEventListener('DOMContentLoaded', function() {
     let allPages = document.getElementById('main-post-list');
-    console.log(allPages);
     let totalPageNumber = document.getElementsByClassName('page').length;
     let pageMapParent = document.getElementsByTagName('nav')[0];
     mainPostList = new ScrollPages(totalPageNumber, allPages, pageMapParent);
-    console.log(mainPostList);
     mainPostList.init();
 })

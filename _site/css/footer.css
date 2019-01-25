@@ -1,19 +1,13 @@
 footer{
     position:fixed;
     width:100%;
-    height:100%;
-    top:calc(100% - 2rem);
+    height:4rem;
+    bottom:-2rem;
     background:var(--ui_green);
-    transition:top 1s ease, transform .5s ease;
+    transition:transform .5s ease;
 } 
-footer.covered{
-    top:0;
-}
 footer.hover:hover{
     transform:translateY(-2rem);
-}
-footer.hover.covered:hover{
-    transform:translateY(0px);
 }
 div.footer-text{
     position:absolute;
@@ -31,15 +25,4 @@ div.footer-text{
 .footer-text a{
     color:var(--ui_bgyellow);
     text-decoration:underline;
-}
-button#uncover{
-    display:none;
-    position:absolute;
-    top:0;
-    width:100%;
-    height:4rem;
-    background:yellow;
-}
-footer.covered button#uncover{
-    display:block;
 }

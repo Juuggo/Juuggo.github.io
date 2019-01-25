@@ -9,9 +9,6 @@ nav{
     margin-bottom:50px;
     transition:all 800ms ease-out;
 }
-nav.closed{
-    transform:translateX(300px);
-}
 nav .menu{
     position:absolute;
     bottom:0px;    

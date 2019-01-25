@@ -37,6 +37,23 @@ main{
     top:150px;
     width:calc(100vw - 200px);
 }
+p{
+    font-size:1.2rem;
+    line-height:1.5rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+pre.highlight{
+    padding:1rem;
+    background-color:transparent;
+    border-left:5px solid var(--ui_green);
+}
+
+/* hide elements if hidden class */
+.hidden {
+    display:none;
+}
+/* for index.html */
 .deer-container{
     position:fixed;
     right:200px;
@@ -47,7 +64,6 @@ main{
     max-height:37vw;
     --arr_size:2vh;
 }
-
 .scrollPage-container{
     position:absolute;
     left:0px;
@@ -55,16 +71,44 @@ main{
     width:calc(100vw - 200px);
     overflow:hidden;
 }
-#main-post-list .text-container{
+.text-container{
     position:relative;
     width:100%;
     height:calc(100% - 250px);
     display:flex;
 }
-.post-intro-container{
-    flex:1;
-}
 .post-info-container{
     width:200px;
     margin-left:50px;
+    height:calc(100vh - 250px);
+    overflow:hidden;
+}
+.post-intro-container{
+    flex:1;
+    box-sizing:border-box;
+    padding-left:calc( (100% - 200px) * .1);
+    padding-top:calc( (100% - 250px) * .1);
+    overflow:hidden;
+}
+.post-excerpt{
+    color:var(--ui_smoke);
+    position:relative;
+    width:calc(100% - 32vh);
+    font-size:2.5vh;
+    margin-top:1em;
+}
+/* for layout post */
+.post-container{
+    display:flex;
+}
+.post-content-container{
+    flex:1;
+    box-sizing:border-box;
+    padding-left:calc( (100% - 200px) * .1);
+    padding-right:calc( (100% - 200px) * .1);
+    /* font-size:1.2rem; */
+}
+.deer-container.hide-aside{
+    right:0px;
+    transform:rotate(-20deg) translateX(70%);
 }

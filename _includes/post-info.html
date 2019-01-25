@@ -5,5 +5,5 @@
         <li><a href="" class="hover">{{ tag }}</a></li>
         {% endfor %}
     </ul>
-    <a class="read-more hover" href="{{ post.url }}">Read more</a>
+    <a class="read-more hover {% if page.layout == 'post' %}hidden{% endif %}" href="{{ post.url }}">Read more</a>
 </div>

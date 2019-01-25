@@ -3,7 +3,6 @@
      * width, height, --arr_size
      * keep the width : height = 32 : 37
      */
-    position:relative;
     overflow:hidden;
 }
 .deer-container *,
@@ -544,12 +543,12 @@ button::-moz-focus-inner{
         height:62%;
     }
 }
-#arrsdown.hover:hover{
+.hover_arrsdown.hover:hover{
     animation: bounce_down 1s ease infinite;
 }
-#arrsleft.hover:hover{
+.hover_arrsleft.hover:hover{
     animation: bounce_left 1s ease infinite;
 }
-#arrsright.hover:hover{
+.hover_arrsright.hover:hover{
     animation: bounce_right 1s ease infinite;
 }

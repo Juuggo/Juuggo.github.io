@@ -1,6 +1,5 @@
 class Deer {
-    constructor(action) {
-        this.action = action;
+    constructor() {
         this.walkNodes=new Array('lhand', 'rhand', 'lfoot', 'rfoot','arrdown1', 'arrdown2');
         this.pressNodes=new Array('deer','rhand','lhand','lfoot','rfoot','arrleft1','arrleft2','arrright1','arrright2');
     }
@@ -39,48 +38,32 @@ class Deer {
         }
     }
     stopAllAnimation() {
-            if(this.timeOutId){
-                helper.clearTimeoutId(this.timeOutId);
-            }
+        if(this.timeoutId){
+            helper.clearTimeoutId(this.timeoutId);
             this.stopPress('left');
             this.stopPress('right');
             this.stopWalk();
+        }
     }
     walkAnimation() {
         this.stopAllAnimation();
         this.startWalk();
-        this.timeOutId = setTimeout(() => {this.stopWalk()}, 1200);
+        this.timeoutId = setTimeout(() => {this.stopWalk()}, 1200);
     }
     init() {
         let handleWalkBtnClick = helper.throttle(() => {
-            this.walkAnimation();
             mainPostList.scrollDown();
         }, 500, this);
-        switch (this.action) {
-            case 'walk':
-                document.getElementById("arrsleft").style.display = 'none';
-                document.getElementById("arrsright").style.display = 'none';
-                document.getElementById("arrsdown").style.display = 'block';
-                document.getElementById('walkbtn').onclick = handleWalkBtnClick;
-                break;
-            case 'press':
-                document.getElementById("arrsleft").style.display = 'block';
-                document.getElementById("arrsright").style.display = 'block';
-                document.getElementById("arrsdown").style.display = 'none';
-                document.getElementById('leftbtn').onclick = () => {
-                    this.stopAllAnimation();
-                    setTimeout(() => {this.startPress('left')}, 20);
-                }
-                document.getElementById('rightbtn').onclick = () => {
-                    this.stopAllAnimation();
-                    setTimeout(() => {this.startPress('right')}, 20);
-                }
-                break;
-            default:
-                console.log("Incorrect 'action' argument.");
+        document.getElementById('walkbtn').onclick = handleWalkBtnClick;
+        document.getElementById('leftbtn').onclick = () => {
+            this.stopAllAnimation();
+            this.timeoutId = setTimeout(() => {this.startPress('left')}, 20);
         }
-    }
+        document.getElementById('rightbtn').onclick = () => {
+            this.stopAllAnimation();
+            this.timeoutId = setTimeout(() => {this.startPress('right')}, 20);
+        }
+    } 
 }
-
-var deerHomepage = new Deer('walk');
+var deerHomepage = new Deer();
 deerHomepage.init();

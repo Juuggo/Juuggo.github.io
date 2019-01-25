@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
+<div class="post-container">
 <div class="post-info-container">
     {% assign post = page %}
     {% include post-info.html %}
+</div>
+<div class="post-content-container">
+    {% include post-title.html %}
+    {{ content }}
+</div>
 </div>

@@ -1,7 +1,7 @@
 .post-title{
     position:relative;
-    top:10%;
-    margin-left:10%;
+    /* top:10%; */
+    /* margin-left:10%; */
 }
 .post-title h2{
     font-family:teko-regular;
@@ -15,11 +15,4 @@
     top:0;
     color:var(--ui_red);
     background:var(--ui_bgyellow);
-}
-.post-excerpt{
-    color:var(--ui_smoke);
-    position:relative;
-    width:calc(100% - 32vh);
-    font-size:2.5vh;
-    margin-top:1em;
 }
