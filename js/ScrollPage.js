@@ -18,7 +18,7 @@ class ScrollPages {
     }
     scrollDown() {
         if (this.currentPageNumber !== this.totalPageNumber){
-            deerHomepage.walkAnimation();
+            deer.walkAnimation();
             this.pages.style.top = (-this.viewHeight * this.currentPageNumber) + 'px';
             this.currentPageNumber++;
             this.updatePageMap();

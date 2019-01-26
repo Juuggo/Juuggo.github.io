@@ -10,12 +10,14 @@
     {% include navigation.html %}
     {% include deer.html %}
     {% include footer.html %}
-    {% if page.url == "/" %}
-    <!-- <script type="text/javascript" src="/js/footer.js"></script> -->
-    <script type="text/javascript" src="/js/ScrollPage.js"></script>
-    {% endif %}
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="/js/helper.js"></script>
     <script type="text/javascript" src="/js/deer.js"></script>
+    {% if page.url == "/" %}
+    <script type="text/javascript" src="/js/ScrollPage.js"></script>
+    {% endif %}
+    {% if page.url == "/tag-index.html" %}
+    <script type="text/javascript" src="/js/tagIndex.js"></script>
+    {% endif %}
 </body>
 </html>

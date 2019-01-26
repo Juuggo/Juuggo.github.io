@@ -8,15 +8,6 @@
     /* height set by js */
     width:100%;
 }
-.text-container{
-    /* opacity:0; */
-    visibility:visible;
-}
-.text-container.in-sight{
-    /* opacity:1; */
-    transform:scale(1);
-    visibility:visible;
-}
 .text-container .post-title{
     transition:transform 800ms ease-in;
     transform-origin:30% 50%;

@@ -1,6 +1,6 @@
 <div class="post-info">
     <p class="post-date">{{ post.date | date_to_string }}</p>
-    <ul class="post-tag">
+    <ul class="post-tag no-point">
         {% for tag in post.tags %}
         <li><a href="" class="hover">{{ tag }}</a></li>
         {% endfor %}

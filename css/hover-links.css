@@ -1,6 +1,7 @@
 a.hover{
     position:relative;
     overflow:hidden;
+    cursor:pointer;
 }
 a.hover:hover{
     z-index:0;

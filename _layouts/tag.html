@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="tag-index">
+    <div class="left-bar">
+        <div class="tag-nav">
+            <ul class="post-tag no-point">
+            {% for tag in site.tags %}
+            <li><a id="tagnav-{{ tag[0] }}" class="hover">{{ tag[0] }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>    
+    </div>
+    <div class="center-content">
+        <div class="tag-post-list">
+            {{ content }}
+        </div>
+    </div>
+</div>

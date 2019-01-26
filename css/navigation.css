@@ -18,10 +18,9 @@ nav .menu{
     width:150px;
     margin-left:30px;
     margin-bottom:2rem;
-    list-style-type:none;
 }
 nav ul{
-    transform-origin:top-left;
+    transform-origin:top left;
 }
 nav li{
     line-height:4vh;

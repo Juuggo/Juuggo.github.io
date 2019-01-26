@@ -54,16 +54,22 @@ class Deer {
         let handleWalkBtnClick = helper.throttle(() => {
             mainPostList.scrollDown();
         }, 500, this);
+        let test = () => helper.throttle(() => { 
+            console.log('throttle');
+            tagNav.scrollRight();
+        }, 500, this);
         document.getElementById('walkbtn').onclick = handleWalkBtnClick;
-        document.getElementById('leftbtn').onclick = () => {
-            this.stopAllAnimation();
-            this.timeoutId = setTimeout(() => {this.startPress('left')}, 20);
-        }
-        document.getElementById('rightbtn').onclick = () => {
+        document.getElementById('leftbtn').onclick = test;
+        // document.getElementById('leftbtn').addEventListener('click', () => {
+            // this.stopAllAnimation();
+            // this.timeoutId = setTimeout(() => {this.startPress('left')}, 20);
+            // test();
+        // })
+        document.getElementById('rightbtn').addEventListener('click', () => {
             this.stopAllAnimation();
             this.timeoutId = setTimeout(() => {this.startPress('right')}, 20);
-        }
+        })
     } 
 }
-var deerHomepage = new Deer();
-deerHomepage.init();
+var deer = new Deer();
+deer.init();

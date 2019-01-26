@@ -1,3 +1,4 @@
+@import "layout.css";
 @import "navigation.css";
 @import "header.css";
 @import "post-info.css";
@@ -64,7 +65,7 @@ h4{
     color:var(--ui_smoke);
 }
 pre.highlight{
-    padding:1.5rem;
+    padding-left:1.5rem;
     margin:3rem 0 3rem 0;
     border-left:6px solid var(--ui_green);
     font-size:1.1rem;
@@ -86,69 +87,3 @@ hr{
     border:none;
 }
 
-/* hide elements if hidden class */
-.hidden {
-    display:none;
-}
-/* for index.html */
-.deer-container{
-    position:fixed;
-    right:200px;
-    bottom:100px;
-    width:32vh;
-    height:37vh;
-    max-width:32vw;
-    max-height:37vw;
-    --arr_size:2vh;
-}
-.scrollPage-container{
-    position:absolute;
-    left:0px;
-    height:calc(100vh - 250px);
-    width:calc(100vw - 200px);
-    overflow:hidden;
-}
-.text-container{
-    position:relative;
-    width:100%;
-    height:calc(100% - 250px);
-    display:flex;
-}
-.post-info-container{
-    width:200px;
-    margin-left:50px;
-    height:calc(100vh - 250px);
-    overflow:hidden;
-}
-.post-intro-container{
-    flex:1;
-    box-sizing:border-box;
-    padding-left:calc( (100% - 200px) * .1);
-    padding-top:calc( (100% - 250px) * .1);
-    overflow:hidden;
-}
-.post-excerpt{
-    color:var(--ui_smoke);
-    position:relative;
-    width:calc(100% - 32vh);
-    font-size:2.5vh;
-    margin-top:1em;
-}
-/* for layout post */
-.post-container{
-    display:flex;
-}
-.post-content-container{
-    flex:1;
-    box-sizing:border-box;
-    padding-left:calc( (100% - 200px) * .1);
-    padding-right:calc( (100% - 200px) * .1);
-    padding-bottom:200px;
-}
-.deer-container.hide-aside{
-    right:0px;
-    transform:rotate(-20deg) translateX(70%);
-}
-.post-content-container p:first-of-type{
-    color:var(--ui_smoke);
-}

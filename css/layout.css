@@ -1,0 +1,102 @@
+/* special class setting */
+.hidden {
+    display:none;
+}
+.left-bar{
+    width:200px;
+    margin-left:50px;
+    height:calc(100vh - 250px);
+    position:fixed;
+    top:150px;
+}
+.center-content{
+    position:absolute;
+    box-sizing:border-box;
+    padding-top:calc( (100% - 250px) * .1);
+    padding-left:calc( (100vw - 450px) * .1);
+    padding-right:calc( (100vw - 450px) * .1);
+    width:calc(100vw - 450px);
+    margin-left:250px;
+    overflow:hidden;
+}
+.left-bar.absolute{
+    position:absolute;
+    top:0px;
+}
+ul.no-point{
+    list-style-type:none;
+}
+/* for index.html */
+.deer-container{
+    position:fixed;
+    right:200px;
+    bottom:100px;
+    width:32vh;
+    height:37vh;
+    max-width:32vw;
+    max-height:37vw;
+    --arr_size:2vh;
+}
+.scrollPage-container{
+    position:absolute;
+    left:0px;
+    height:calc(100vh - 250px);
+    width:calc(100vw - 200px);
+    overflow:hidden;
+}
+.text-container{
+    position:relative;
+    width:100%;
+    height:calc(100% - 250px);
+}
+.post-excerpt{
+    color:var(--ui_smoke);
+    position:relative;
+    width:calc(100% - 32vh);
+    font-size:2.5vh;
+    margin-top:1em;
+}
+/* for post layout */
+.post-content-container{
+    padding-bottom:200px;
+}
+.deer-container.hide-aside{
+    right:0px;
+    transform:rotate(-20deg) translateX(70%);
+}
+.post-content-container p:first-of-type{
+    color:var(--ui_smoke);
+}
+/* for tag index page */
+.deer-container.stand-center{
+    left:50vw;
+    bottom:0px;
+    transform:translateX(-50%);
+}
+.tag-index .center-content{
+    width:calc(100vw - 500px);
+    height:40vh;
+    overflow:hidden;
+    padding:0;
+}
+.tag-posts-list{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+}
+.tag-post-item{
+    position:absolute;
+    top:0;
+    width:calc(100vw - 500px);
+    height:100%;
+    background-color:var(--ui_green);
+    border:2px solid yellow;
+    box-sizing:border-box;
+    padding-left:40px;
+}
+.tag-nav{
+    width:100%;
+    position:absolute;
+    top:5%;
+}
