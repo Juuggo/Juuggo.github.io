@@ -54,21 +54,19 @@ class Deer {
         let handleWalkBtnClick = helper.throttle(() => {
             mainPostList.scrollDown();
         }, 500, this);
-        let test = () => helper.throttle(() => { 
-            console.log('throttle');
+        let handleLeftbtn = helper.throttle(() => { 
+            this.stopAllAnimation();
+            this.timeoutId = setTimeout(() => {this.startPress('left')}, 20);
+            tagNav.scrollLeft();
+        }, 500, this);
+        let handleRightbtn = helper.throttle(() => { 
+            this.stopAllAnimation();
+            this.timeoutId = setTimeout(() => {this.startPress('right')}, 20);
             tagNav.scrollRight();
         }, 500, this);
         document.getElementById('walkbtn').onclick = handleWalkBtnClick;
-        document.getElementById('leftbtn').onclick = test;
-        // document.getElementById('leftbtn').addEventListener('click', () => {
-            // this.stopAllAnimation();
-            // this.timeoutId = setTimeout(() => {this.startPress('left')}, 20);
-            // test();
-        // })
-        document.getElementById('rightbtn').addEventListener('click', () => {
-            this.stopAllAnimation();
-            this.timeoutId = setTimeout(() => {this.startPress('right')}, 20);
-        })
+        document.getElementById('leftbtn').addEventListener('click', handleLeftbtn);
+        document.getElementById('rightbtn').addEventListener('click', handleRightbtn);
     } 
 }
 var deer = new Deer();

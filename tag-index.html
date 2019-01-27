@@ -1,13 +1,32 @@
 ---
 layout: tag
 ---
-{% for tag in site.tags %}
-<div class="tag-post-item" id="tagitem-{{ tag[0] }}">
-    <p>{{ tag[0] }}</p>
-    <ul>
-        {% for post in tag[1] %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
+<div class="tag-index">
+    <div class="left-bar">
+        <div class="tag-nav">
+            <ul class="post-tag no-point">
+            {% assign tag-index = 0 %}
+                {% for tag in site.tags %}
+                <li><a id="tagnav-{{ tag-index }}" class="hover">{{ tag[0] }}</a></li>
+            {% assign tag-index = tag-index + 1 %}
+                {% endfor %}
+            </ul>
+        </div>    
+    </div>
+    <div class="center-content">
+        <div class="tag-post-list">
+            {% assign item-index = 0 %}
+            {% for tag in site.tags %}
+            <div class="tag-post-item" id="tagitem-{{ item-index }}">
+                <p>{{ tag[0] }}</p>
+                <ul>
+                    {% for post in tag[1] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% assign tag-index = item-index + 1 %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
-{% endfor %}

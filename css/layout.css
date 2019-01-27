@@ -79,11 +79,12 @@ ul.no-point{
     overflow:hidden;
     padding:0;
 }
-.tag-posts-list{
+.tag-post-list{
     position:absolute;
     left:0;
     top:0;
     height:100%;
+    transition:left 500ms ease-out;
 }
 .tag-post-item{
     position:absolute;
