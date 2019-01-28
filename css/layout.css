@@ -73,31 +73,42 @@ ul.no-point{
     bottom:0px;
     transform:translateX(-50%);
 }
+.tag-nav{
+    width:100%;
+    position:absolute;
+    top:5%;
+}
 .tag-index .center-content{
     width:calc(100vw - 500px);
     height:40vh;
     overflow:hidden;
     padding:0;
 }
-.tag-post-list{
+.tag-item-container{
     position:absolute;
     left:0;
     top:0;
     height:100%;
-    transition:left 500ms ease-out;
+    transition:all 500ms ease-out;
 }
-.tag-post-item{
+.tag-item{
     position:absolute;
     top:0;
     width:calc(100vw - 500px);
     height:100%;
-    background-color:var(--ui_green);
-    border:2px solid yellow;
     box-sizing:border-box;
     padding-left:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
-.tag-nav{
-    width:100%;
-    position:absolute;
-    top:5%;
+.tag-item .item-tag-title{
+    color:var(--ui_green);
+    font-family:teko-regular;
+    font-size:3rem;
+    text-transform:uppercase;
+}
+.tag-item a{
+    text-decoration:none;
+    font-size:1.2rem;
 }

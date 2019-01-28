@@ -4,28 +4,30 @@ layout: tag
 <div class="tag-index">
     <div class="left-bar">
         <div class="tag-nav">
-            <ul class="post-tag no-point">
+            <ul class="tag-list post-tag no-point">
             {% assign tag-index = 0 %}
                 {% for tag in site.tags %}
-                <li><a id="tagnav-{{ tag-index }}" class="hover">{{ tag[0] }}</a></li>
-            {% assign tag-index = tag-index + 1 %}
+                <li><a class="hover">{{ tag[0] }}</a></li>
+            {% assign tag-index = tag-index | plus: 1 %}
                 {% endfor %}
             </ul>
         </div>    
     </div>
     <div class="center-content">
-        <div class="tag-post-list">
+        <div class="tag-item-container">
             {% assign item-index = 0 %}
             {% for tag in site.tags %}
-            <div class="tag-post-item" id="tagitem-{{ item-index }}">
-                <p>{{ tag[0] }}</p>
+            <div class="tag-item" id="{{tag[0]}}">
+                <div>
+                <p class="item-tag-title">{{ tag[0] }}</p>
                 <ul>
                     {% for post in tag[1] %}
-                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    <li class="item-post"><a href="{{ post.url }}" class="hover">{{ post.title }}</a></li>
                     {% endfor %}
                 </ul>
+                </div>
             </div>
-            {% assign tag-index = item-index + 1 %}
+            {% assign tag-index = item-index | plus: 1 %}
             {% endfor %}
         </div>
     </div>

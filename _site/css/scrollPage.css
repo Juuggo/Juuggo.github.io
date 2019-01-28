@@ -8,6 +8,9 @@
     /* height set by js */
     width:100%;
 }
+.text-container{
+    overflow:hidden;
+}
 .text-container .post-title{
     transition:transform 800ms ease-in;
     transform-origin:30% 50%;
