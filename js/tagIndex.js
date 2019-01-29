@@ -8,10 +8,7 @@ class TagNav {
         this.totalTagCounts = this.tagItems.length;
     }
     initItemPosition() {
-        console.log('start init postion, index:' + this.currentItemIndex);
         this.itemContainer.style.left = -this.currentItemIndex * this.itemWidth + 'px'; 
-        console.log(this.itemContainer.style.left);
-        console.log('end init postion, index:' + this.currentItemIndex);
         for(let i=0; i<this.totalTagCounts; i++) {
             let itemStyle = this.tagItems[i].style;
             itemStyle.left = this.itemWidth * i + 'px';
@@ -21,52 +18,63 @@ class TagNav {
         if (this.currentItemIndex !== this.totalTagCounts - 1) {
             this.itemContainer.style.left = -(this.currentItemIndex+1) * this.itemWidth + 'px'; 
             this.currentItemIndex++;
+            deer.stopAllAnimation();
+            deer.timeoutId = setTimeout(() => {deer.startPress('right')}, 20);
         }
     }
     scrollRight() {
         if (this.currentItemIndex !== 0) {
             this.itemContainer.style.left = -(this.currentItemIndex-1) * this.itemWidth + 'px'; 
             this.currentItemIndex--;
+            deer.stopAllAnimation();
+            deer.timeoutId = setTimeout(() => {deer.startPress('left')}, 20);
         }
     }
     getTagIndexByName(tagName) {
-        let toItem = document.getElementById(tagName);
+        let itemId = 'item-' + tagName;
+        let toItem = document.getElementById(itemId);
         let tagIndex = this.tagItems.indexOf(toItem);
         return tagIndex;
     }
     scrollToTag(tagName) {
         let tagIndex = this.getTagIndexByName(tagName);
-        console.log(this.itemWidth);
         while (tagIndex !== this.currentItemIndex) {
-            console.log('to: ' + tagIndex);
-            console.log('current: ' + this.currentItemIndex);
             if (tagIndex > this.currentItemIndex) {
                 this.scrollLeft();
             } else {
                 this.scrollRight();
             }
-            console.log('afterscroll,to: ' + tagIndex);
-            console.log('afterscroll,current: ' + this.currentItemIndex);
         }
-        window.location.hash = 'tag-' + tagName;
     }
     init() {
-        console.log('init: ', this.itemContainer.style.left);
         if(window.location.hash) {
             let tagName = window.location.hash.split('#')[1];
-            console.log(tagName);
             this.currentItemIndex = this.getTagIndexByName(tagName);
         } else {
             this.currentItemIndex = 0;
         }
         this.initItemPosition();
-        console.log('init currentItemIndex: ' + this.currentItemIndex);
         for(let i=0; i<this.totalTagCounts; i++) {
             let tagName = this.tagLinks[i].innerHTML;
             this.tagLinks[i].addEventListener('click', event => {
                 this.scrollToTag(tagName);
             });
         }
+        document.addEventListener('touchstart', (event) => {
+            this.startX = event.touches[0].pageX;
+        });
+        document.addEventListener('touchend', (event) => {
+            let endX = event.changedTouches[0].pageX;
+            if (this.startX - endX < 0) {
+                this.scrollRight();
+            }
+            if (this.startX - endX > 0) {
+                this.scrollLeft();
+            }
+        });
+        document.addEventListener('touchmove', (event) => {
+            event.preventDefault();
+        });
     }
 }
 

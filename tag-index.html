@@ -7,8 +7,8 @@ layout: tag
             <ul class="tag-list post-tag no-point">
             {% assign tag-index = 0 %}
                 {% for tag in site.tags %}
-                <li><a class="hover">{{ tag[0] }}</a></li>
-            {% assign tag-index = tag-index | plus: 1 %}
+                <li><a class="hover" href="#{{ tag[0] }}">{{ tag[0] }}</a></li>
+                {% assign tag-index = tag-index | plus: 1 %}
                 {% endfor %}
             </ul>
         </div>    
@@ -17,7 +17,7 @@ layout: tag
         <div class="tag-item-container">
             {% assign item-index = 0 %}
             {% for tag in site.tags %}
-            <div class="tag-item" id="{{tag[0]}}">
+            <div class="tag-item" id="item-{{tag[0]}}">
                 <div>
                 <p class="item-tag-title">{{ tag[0] }}</p>
                 <ul>

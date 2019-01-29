@@ -55,14 +55,14 @@ class Deer {
             mainPostList.scrollDown();
         }, 500, this);
         let handleLeftbtn = helper.throttle(() => { 
-            this.stopAllAnimation();
-            this.timeoutId = setTimeout(() => {this.startPress('left')}, 20);
-            tagNav.scrollLeft();
+            // this.stopAllAnimation();
+            // this.timeoutId = setTimeout(() => {this.startPress('left')}, 20);
+            tagNav.scrollRight();
         }, 500, this);
         let handleRightbtn = helper.throttle(() => { 
-            this.stopAllAnimation();
-            this.timeoutId = setTimeout(() => {this.startPress('right')}, 20);
-            tagNav.scrollRight();
+            // this.stopAllAnimation();
+            // this.timeoutId = setTimeout(() => {this.startPress('right')}, 20);
+            tagNav.scrollLeft();
         }, 500, this);
         document.getElementById('walkbtn').onclick = handleWalkBtnClick;
         document.getElementById('leftbtn').addEventListener('click', handleLeftbtn);
