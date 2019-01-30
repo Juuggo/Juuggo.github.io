@@ -10,6 +10,27 @@ nav{
     z-index:1;
     transition:all 800ms ease-out;
 }
+nav .external-links{
+    position:absolute;
+    top:0;
+    margin-left:50px;
+    margin-top:2rem;
+}
+nav .external-links li{
+    height:40px;
+}
+nav .external-links a{
+    display:block;
+    height:21px;
+}
+.external-links svg{
+    fill:var(--ui_grey);
+    width:20px;
+    height:20px;
+}
+.external-links a.hover svg:hover{
+    fill:var(--ui_bgyellow);
+}
 nav .menu{
     position:absolute;
     bottom:0px;    
@@ -22,7 +43,7 @@ nav .menu{
 nav ul{
     transform-origin:top left;
 }
-nav li{
+nav .menu li{
     line-height:4vh;
 }
 nav li a{
