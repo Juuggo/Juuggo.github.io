@@ -2,7 +2,7 @@
 <html{% if page.url == '/' %} class="overflow_hidden"{% endif %}>
 {% include head.html %}
 
-<body>
+<body{% if page.url == '/' %} class="overflow_hidden"{% endif %}>
     {% include header.html %}
     <main>
         {{ content }}

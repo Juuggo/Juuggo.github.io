@@ -3,6 +3,7 @@
     width:100%;
     overflow:hidden;
     position:relative;
+    top:0;
 }
 .post-info>*{
     margin:0;
@@ -12,7 +13,7 @@
     top:5px;
     color:var(--ui_green);
     font-family:teko-light;
-    font-size:3vh;
+    font-size:2rem;
 }
 .post-info .post-tag{
     bottom:20%;
@@ -26,15 +27,15 @@ ul.post-tag li{
     text-transform:uppercase;
     text-decoration:none;
     color:var(--ui_grey);
-    font-size:4vh;
-    line-height:4vh;
+    font-size:3rem;
+    line-height:3rem;
 }
 .post-info a.read-more{
     position:absolute;
-    bottom:3vh;
+    bottom:3rem;
     color:var(--ui_green);
     font-family:teko-light;
-    font-size:3vh;
+    font-size:2rem;
     text-decoration:underline;
-    line-height:4vh;
+    line-height:2rem;
 }

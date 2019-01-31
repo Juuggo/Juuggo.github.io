@@ -5,6 +5,9 @@
 .overflow_hidden{
     overflow:hidden;
 }
+body.overflow_hidden{
+    position:relative;
+}
 .left-bar{
     width:200px;
     margin-left:50px;
