@@ -5,14 +5,14 @@
 .left-bar{
     width:200px;
     margin-left:50px;
-    height:calc(100vh - 250px);
+    height:calc(100vh - 230px);
     position:fixed;
     top:150px;
 }
 .center-content{
     position:absolute;
     box-sizing:border-box;
-    padding-top:calc( (100% - 250px) * .1);
+    padding-top:calc( (100% - 230px) * .1);
     padding-left:calc( (100vw - 450px) * .1);
     padding-right:calc( (100vw - 450px) * .1);
     width:calc(100vw - 450px);
@@ -40,19 +40,19 @@ ul.no-point{
 .scrollPage-container{
     position:absolute;
     left:0px;
-    height:calc(100vh - 250px);
+    height:calc(100vh - 230px);
     width:calc(100vw - 200px);
     overflow:hidden;
 }
 .text-container{
     position:relative;
     width:100%;
-    height:calc(100% - 250px);
+    height:calc(100% - 230px);
 }
 .post-excerpt{
     color:var(--ui_smoke);
     position:relative;
-    width:calc(100% - 32vh);
+    width:calc(100% - 20vh);
     font-size:2.5vh;
     margin-top:1em;
 }
@@ -111,4 +111,19 @@ ul.no-point{
 .tag-item a{
     text-decoration:none;
     font-size:1.2rem;
+}
+/* for screen that width is less than 1024px */
+@media only screen and (max-width:1023px) {
+    .center-content{
+        width:calc(100vw - 250px);
+    }
+    .tag-index .center-content{
+        width:calc(100vw - 300px);
+    }
+    .tag-item{
+        width:calc(100vw - 300px);
+    }
+    .deer-container{
+        right:0;
+    }
 }

@@ -1,5 +1,5 @@
 nav{
-    width:200px;
+    width:180px;
     height:calc(100% - 120px);
     position:fixed;
     right:0px;
@@ -7,21 +7,21 @@ nav{
     border-left:1px solid #b9c49f;
     margin-top:50px;
     margin-bottom:50px;
+    margin-right:20px;
     z-index:1;
-    transition:all 800ms ease-out;
+    transition:all 500ms ease-out;
+    background-color:var(--ui_bgyellow);
 }
 nav .external-links{
-    position:absolute;
-    top:0;
-    margin-left:50px;
-    margin-top:2rem;
+    position:relative;
+    width:20px;
+    margin:2rem auto;
 }
 nav .external-links li{
     height:40px;
 }
 nav .external-links a{
     display:block;
-    height:21px;
 }
 .external-links svg{
     fill:var(--ui_grey);
@@ -34,23 +34,81 @@ nav .external-links a{
 nav .menu{
     position:absolute;
     bottom:0px;    
-    left:0;
+    left:50%;
     right:0;
-    width:150px;
-    margin-left:30px;
     margin-bottom:2rem;
+    transform:translateX(-50%);
 }
 nav ul{
     transform-origin:top left;
 }
 nav .menu li{
-    line-height:4vh;
 }
 nav li a{
     color:var(--ui_green);
     font-family:teko-regular;
-    font-size:2.5vh;
+    font-size:25px;
+    line-height:30px;
     font-weight:bold;
     text-transform:uppercase;
     text-decoration:none;
+}
+#toggle-nav {
+    display:none;
+    position:absolute;
+    left:-65px;
+    top:2px;
+    width:30px;
+    height:30px;
+    background:transparent;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+#toggle-nav p,
+#toggle-nav p::before,
+#toggle-nav p::after{
+    position:absolute;
+    width:30px;
+    height:6px;
+    background-color:var(--ui_green);
+    left:0;
+    transition:all 400ms ease-out;
+}
+#toggle-nav p{
+    top:12px;
+    margin:0;
+}
+#toggle-nav p::before,
+#toggle-nav p::after{
+    content:"";
+}
+#toggle-nav p::before{
+    top:-12px;
+}
+#toggle-nav p::after{
+    top:12px;
+}
+#toggle-nav.toggle p{
+    background-color:var(--ui_bgyellow);
+}
+#toggle-nav.toggle p::before,
+#toggle-nav.toggle p::after{
+    width:31px;
+}
+#toggle-nav.toggle p::before{
+    transform-origin:bottom right;
+    transform:rotate(-45deg);
+}
+#toggle-nav.toggle p::after{
+    transform-origin:top right;
+    transform:rotate(45deg);
+}
+@media only screen and (max-width: 1024px){
+    nav{
+        right:-200px;
+    }
+    #toggle-nav{
+        display:block;
+    } 
 }
