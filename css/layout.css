@@ -118,8 +118,8 @@ ul.no-point{
     text-decoration:none;
     font-size:1.2rem;
 }
-/* for screen that width is less than 1024px */
-@media only screen and (max-width:1023px) {
+/* for screen that width is less than 1000px */
+@media only screen and (max-width:1000px){
     .center-content{
         width:calc(100vw - 250px);
     }
@@ -135,5 +135,22 @@ ul.no-point{
     .tag-item{
         width:calc(100vw - 300px);
         justify-content:left;
+    }
+}
+@media only screen and (max-width:768px){
+    .left-bar,
+    .left-bar.absolute{
+        display:none;
+    }
+    .center-content{
+        width:100%;
+        margin-left:0;
+    }
+    .tag-index .center-content{
+        width:100vw;
+    }
+    .tag-item{
+        width:100vw;
+        justify-content:center;
     }
 }

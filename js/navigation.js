@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('resize');
         navToggled = 0;
         navToggleBtn.classList.remove('toggle');
-        if(document.documentElement.clientWidth > 1023) {
+        if(document.documentElement.clientWidth > 999) {
             navBar.style.right = '0px';
         } else {
             navBar.style.right = '-200px';
