@@ -23,7 +23,6 @@ body.overflow_hidden{
     padding-right:calc( (100vw - 450px) * .1);
     width:calc(100vw - 450px);
     margin-left:250px;
-    overflow:hidden;
 }
 .left-bar.absolute{
     position:absolute;
@@ -137,14 +136,22 @@ ul.no-point{
         justify-content:left;
     }
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:640px){
     .left-bar,
     .left-bar.absolute{
         display:none;
     }
     .center-content{
-        width:100%;
+        width:100vw;
+        padding:0 1rem;
         margin-left:0;
+    }
+    .center-content .post-info-container__mobile{
+        position:relative;
+        top:1rem;
+    }
+    .post-excerpt{
+        display:none;
     }
     .tag-index .center-content{
         width:100vw;

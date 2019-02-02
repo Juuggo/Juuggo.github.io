@@ -47,8 +47,7 @@ ul.post-tag li{
     height:auto;
     width:calc(100% - 20vh);
 }
-.post-info-container__mobile .post-info *{
-    display:inline;
+main .post-info-container__mobile .post-info *{
     position:relative;
     font-family:teko-light;
     font-size:24px;
@@ -65,7 +64,7 @@ ul.post-tag li{
     position:relative;
     bottom:0px;
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:640px){
     .post-info-container__mobile{
         display:block;
     }

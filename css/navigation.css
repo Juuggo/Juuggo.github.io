@@ -7,7 +7,7 @@ nav{
     border-left:1px solid #b9c49f;
     margin-top:50px;
     margin-bottom:50px;
-    margin-right:20px;
+    padding-right:20px;
     z-index:1;
     transition:all 500ms ease-out;
     background-color:var(--ui_bgyellow);
