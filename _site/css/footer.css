@@ -1,13 +1,13 @@
 footer{
     position:fixed;
     width:100%;
-    height:4rem;
-    bottom:-2rem;
+    height:6vh;
+    bottom:-3vh;
     background:var(--ui_green);
     transition:transform .5s ease;
 } 
 footer.hover:hover{
-    transform:translateY(-2rem);
+    transform:translateY(-3vh);
 }
 div.footer-text{
     position:absolute;
@@ -18,8 +18,8 @@ div.footer-text{
 .footer-text p{
     color:var(--ui_bgyellow);
     text-decoration:none;
-    font-size:1rem;
-    line-height:2rem;
+    font-size:2vh;
+    line-height:3vh;
     margin:0;
 }
 .footer-text span,

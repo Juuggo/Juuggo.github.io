@@ -11,7 +11,7 @@ body.overflow_hidden{
 .left-bar{
     width:200px;
     margin-left:50px;
-    height:calc(100vh - 230px);
+    height:82vh;
     position:fixed;
     top:150px;
 }
@@ -45,14 +45,14 @@ ul.no-point{
 .scrollPage-container{
     position:absolute;
     left:0px;
-    height:calc(100vh - 230px);
+    height:82vh;
     width:calc(100vw - 200px);
     overflow:hidden;
 }
 .text-container{
     position:relative;
     width:100%;
-    height:calc(100% - 230px);
+    height:82vh;
 }
 .post-excerpt{
     color:var(--ui_smoke);
@@ -119,9 +119,6 @@ ul.no-point{
 }
 /* for screen that width is less than 1000px */
 @media only screen and (max-width:1000px){
-    .center-content{
-        width:calc(100vw - 250px);
-    }
     .scrollPage-container{
         width:100vw;
     }
