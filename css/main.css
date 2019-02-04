@@ -35,7 +35,7 @@ body{
 }
 main{
     position:absolute;
-    top:130px;
+    top:15vh;
     width:calc(100vw - 200px);
 }
 p{
