@@ -13,7 +13,7 @@
     /* top:5px; */
     color:var(--ui_green);
     font-family:teko-light;
-    font-size:2rem;
+    font-size:32px;
 }
 .post-info .post-tag{
     bottom:20%;
@@ -27,17 +27,16 @@ ul.post-tag li{
     text-transform:uppercase;
     text-decoration:none;
     color:var(--ui_grey);
-    font-size:3rem;
-    line-height:3rem;
+    font-size:48px;
+    line-height:48px;
 }
 .post-info a.read-more{
     position:absolute;
-    bottom:3rem;
+    bottom:16px;
     color:var(--ui_green);
     font-family:teko-light;
-    font-size:2rem;
+    font-size:32px;
     text-decoration:underline;
-    /* line-height:2rem; */
 }
 /* for post-info-container__mobile */
 .post-info-container__mobile{

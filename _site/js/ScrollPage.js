@@ -94,7 +94,6 @@ class ScrollPages {
         this.textContainers[0].classList.add('in-sight');
         let handleMouseWheel = helper.throttle(this.mouseScroll, 500, this);
         let handleResize = helper.debounce(this.resize, 500, this);
-        console.log(this.textContainers[0]);
         for (let i=0; i<this.totalPageNumber; i++) {
             this.pageDoms[i].style.height = this.viewHeight + 'px';
         }
@@ -109,10 +108,10 @@ class ScrollPages {
         });
         document.addEventListener('touchend', (event) => {
             let endY = event.changedTouches[0].pageY;
-            if (this.startY - endY < 0) {
+            if (this.startY - endY < -50) {
                 this.scrollUp();
             }
-            if (this.startY - endY > 0) {
+            if (this.startY - endY > 50) {
                 this.scrollDown();
             }
         });

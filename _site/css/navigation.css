@@ -15,7 +15,7 @@ nav{
 nav .external-links{
     position:relative;
     width:20px;
-    margin:2rem auto;
+    margin:32px auto;
 }
 nav .external-links li{
     height:40px;
@@ -36,7 +36,7 @@ nav .menu{
     bottom:0px;    
     left:50%;
     right:0;
-    margin-bottom:2rem;
+    margin-bottom:32px;
     transform:translateX(-50%);
 }
 nav ul{
@@ -47,8 +47,8 @@ nav .menu li{
 nav li a{
     color:var(--ui_green);
     font-family:teko-regular;
-    font-size:25px;
-    line-height:30px;
+    font-size:26px;
+    height:30px;
     font-weight:bold;
     text-transform:uppercase;
     text-decoration:none;
@@ -56,10 +56,10 @@ nav li a{
 #toggle-nav {
     display:none;
     position:absolute;
-    left:-65px;
+    left:-6vh;
     top:2px;
-    width:30px;
-    height:30px;
+    width:3vh;
+    height:3vh;
     background:transparent;
     border:none;
     outline:none;
@@ -69,14 +69,14 @@ nav li a{
 #toggle-nav p::before,
 #toggle-nav p::after{
     position:absolute;
-    width:30px;
-    height:6px;
+    width:3vh;
+    height:.6vh;
     background-color:var(--ui_green);
     left:0;
     transition:all 400ms ease-out;
 }
 #toggle-nav p{
-    top:12px;
+    top:1.2vh;
     margin:0;
 }
 #toggle-nav p::before,
@@ -84,17 +84,17 @@ nav li a{
     content:"";
 }
 #toggle-nav p::before{
-    top:-12px;
+    top:-1.2vh;
 }
 #toggle-nav p::after{
-    top:12px;
+    top:1.2vh;
 }
 #toggle-nav.toggle p{
     background-color:var(--ui_bgyellow);
 }
 #toggle-nav.toggle p::before,
 #toggle-nav.toggle p::after{
-    width:31px;
+    width:3.2vh;
 }
 #toggle-nav.toggle p::before{
     transform-origin:bottom right;
@@ -112,3 +112,12 @@ nav li a{
         display:block;
     } 
 }
+@media only screen and (max-width: 640px){
+    nav{
+        height:100vh;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    #toggle-nav {
+        top:2vh;
+    }

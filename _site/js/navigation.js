@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     navBar.style.right = window.getComputedStyle(navBar).right + 'px';
     let navToggled = 0;
     let handleResize = function() {
-        console.log('resize');
         navToggled = 0;
         navToggleBtn.classList.remove('toggle');
         if(document.documentElement.clientWidth > 999) {

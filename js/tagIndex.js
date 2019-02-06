@@ -46,7 +46,12 @@ class TagNav {
             }
         }
     }
+    resize() {
+        this.itemWidth = parseInt(window.getComputedStyle(this.tagItems[0]).width); 
+        this.initItemPosition();
+    }
     init() {
+        let handleResize = helper.debounce(this.resize, 800, this);
         if(window.location.hash) {
             let tagName = window.location.hash.split('#')[1];
             this.currentItemIndex = this.getTagIndexByName(tagName);
@@ -65,18 +70,21 @@ class TagNav {
         });
         document.addEventListener('touchend', (event) => {
             let endX = event.changedTouches[0].pageX;
-            if (this.startX - endX < 0) {
+            if (this.startX - endX < -50) {
                 this.scrollRight();
             }
-            if (this.startX - endX > 0) {
+            if (this.startX - endX > 50) {
                 this.scrollLeft();
             }
         });
         document.addEventListener('touchmove', (event) => {
             event.preventDefault();
         });
+        window.addEventListener('resize', handleResize);
     }
 }
 
-var tagNav = new TagNav();
-tagNav.init();
+document.addEventListener('DOMContentLoaded', function() {
+    tagNav = new TagNav();
+    tagNav.init();
+})

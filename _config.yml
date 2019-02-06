@@ -5,3 +5,5 @@ kramdown:
 
 plugins:
   - jekyll-toc
+  - autoprefixer-rails
+  - jekyll-assets
