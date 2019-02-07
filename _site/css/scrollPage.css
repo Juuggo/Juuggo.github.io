@@ -22,12 +22,12 @@
 .page-map-container{
     position:absolute;
     top:50%;
-    left:-30px;
+    left:-20px;
     transform:translateY(-50%);
 }
 .page-map{
     position:relative;
-    width:50px;
+    width:40px;
     /* height set by js */
     right:0;
     cursor:pointer;

@@ -36,13 +36,11 @@ nav .menu{
     bottom:0px;    
     left:50%;
     right:0;
-    margin-bottom:32px;
+    margin-bottom:48px;
     transform:translateX(-50%);
 }
 nav ul{
     transform-origin:top left;
-}
-nav .menu li{
 }
 nav li a{
     color:var(--ui_green);
