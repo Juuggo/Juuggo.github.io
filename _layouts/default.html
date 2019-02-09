@@ -3,7 +3,9 @@
 {% include head.html %}
 
 <body{% if page.url == '/' %} class="overflow_hidden"{% endif %}>
+    <div class="header-container {% if page.layout == 'post' %}relative{% endif %}">
     {% include header.html %}
+    </div>
     <main>
         {{ content }}
     </main>
@@ -12,6 +14,7 @@
     {% include footer.html %}
 
     {% if page.url == "/" %}
+    {% include cover.html %}
     <script type="text/javascript" src="/js/ScrollPage.js"></script>
     {% endif %}
     {% if page.url == "/tag-index.html" %}
