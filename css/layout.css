@@ -71,6 +71,7 @@ ul.no-point{
 .deer-container.hide-aside{
     right:0;
     transform:rotate(-20deg) translateX(70%);
+    z-index:1;
 }
 .post-content-container p:first-of-type{
     color:var(--ui_smoke);

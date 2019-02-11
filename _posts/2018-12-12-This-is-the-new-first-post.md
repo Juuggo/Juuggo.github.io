@@ -1,5 +1,4 @@
 ---
-layout: post
 tags: [ex, quas, petentium]
 title-split: this is / the new first / post
 ---

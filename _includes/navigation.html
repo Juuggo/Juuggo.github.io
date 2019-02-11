@@ -1,10 +1,9 @@
 <nav id="right-nav">
     {% include external-links.html %}
     <ul class="menu no-point">
-        <li><a href="/" class="hover">Welcome</a></li>
-        <li><a href="/#blog" class="hover">Homepage</a></li> 
-        <li><a href="/tag-index.html" class="hover">Tags</a></li>
-        <li><a href="/contact.html" class="hover">Contact Me</a></li>
+        {% for nav-item in site.data.navigation %}
+        <li><a href="{{nav-item.nav-link}}" class="hover">{{nav-item.nav-name}}</a></li>
+        {% endfor %}
     </ul>
     <button id="toggle-nav"><p></p></button>
 </nav>

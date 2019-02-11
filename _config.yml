@@ -5,3 +5,11 @@ kramdown:
 
 plugins:
   - jekyll-toc
+
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

@@ -1,5 +1,4 @@
 ---
-layout: post
 tags: [ex, quas, petentium]
 title-split: and / this is / the new second / post
 ---

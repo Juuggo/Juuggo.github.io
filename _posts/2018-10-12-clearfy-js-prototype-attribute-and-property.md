@@ -1,5 +1,4 @@
 ---
-layout: post
 tags: [ex, quas, javscript, test,  petentium]
 title-split: clearfy / js prototype attribute / and property 
 ---
