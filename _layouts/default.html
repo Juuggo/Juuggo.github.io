@@ -17,9 +17,10 @@
     {% include cover.html %}
     <script src="js/cover.js"></script>
     <script type="text/javascript" src="/js/ScrollPage.js"></script>
-    {% endif %}
-    {% if page.url == "/tag-index.html" %}
+    {% elsif page.url == "/tag-index.html" %}
     <script type="text/javascript" src="/js/tagIndex.js"></script>
+    {% elsif page.url == "/contact.html" %}
+    <script src="js/contact.js"></script>
     {% endif %}
     <script src="js/main.js"></script>
     <script type="text/javascript" src="/js/helper.js"></script>
