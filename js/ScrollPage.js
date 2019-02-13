@@ -121,11 +121,3 @@ class ScrollPages {
         window.addEventListener('resize', handleResize);
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    let allPages = document.getElementById('main-post-list');
-    let totalPageNumber = document.getElementsByClassName('page').length;
-    let pageMapParent = document.getElementsByTagName('nav')[0];
-    mainPostList = new ScrollPages(totalPageNumber, allPages, pageMapParent);
-    mainPostList.init();
-})

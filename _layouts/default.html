@@ -15,16 +15,12 @@
 
     {% if page.url == "/" %}
     {% include cover.html %}
-    <script src="js/cover.js"></script>
-    <script type="text/javascript" src="/js/ScrollPage.js"></script>
+    <script src="/js/ScrollPage.js"></script>
     {% elsif page.url == "/tag-index.html" %}
-    <script type="text/javascript" src="/js/tagIndex.js"></script>
-    {% elsif page.url == "/contact.html" %}
-    <script src="js/contact.js"></script>
+    <script src="/js/TagNav.js"></script>
     {% endif %}
+    <script src="/js/helper.js"></script>
+    <script src="/js/Deer.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript" src="/js/helper.js"></script>
-    <script type="text/javascript" src="/js/deer.js"></script>
-    <script type="text/javascript" src="/js/navigation.js"></script>
 </body>
 </html>
