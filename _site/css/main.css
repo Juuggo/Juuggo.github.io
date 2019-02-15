@@ -46,22 +46,29 @@ p{
     margin-top:16px;
     margin-bottom:16px;
 }
-h1{
+ul, ol{
+    margin-bottom:16px;
+}
+li{
+    line-height:28px;
+    font-size:16px;
+}
+h2{
     font-family:teko-light;
     font-size:48px;
     margin-top:48px;
     line-height:48px;
     color:var(--ui_green);
 }
-h2{
+h3{
     font-size:28px;
     margin:28px 0;
 }
-h3{
+h4{
     font-size:24px;
     margin:24px 0;
 }
-h4{
+h5{
     font-size:18px;
     margin:18px 0;
     color:var(--ui_smoke);
@@ -69,14 +76,18 @@ h4{
 pre.highlight{
     padding:4px 0px 4px 16px;
     margin:16px 0;
+    border:2px solid var(--ui_green);
     border-left:6px solid var(--ui_green);
+    border-radius:5px;
     font-size:16px;
     overflow:auto;
 }
-code{
+code,
+code *{
     font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;
 }
-p code{
+p code,
+li code{
     color:var(--ui_grey);
     font-size:16px;
     font-style:italic;
