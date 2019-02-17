@@ -1,11 +1,9 @@
 ---
-tags: [ex, quas, javscript, test,  petentium]
+tags: [javscript, prototype,  front-end]
 title-split: clearfy / js prototype attribute / and property
 excerpt-separator: <!--more-->
 ---
-Introduction.
-
-
+Prototype is one of the most important features of JavaScript language. It's initial for understanding how JavaScript inheritance works. However, It's confusing since there are prototype property as well as prototype attribute in JavaScript. So this article is a note about the different definition of prototype property and prototype attribute, and how they are used to implement inheritance.
 
 <!--more-->
 
