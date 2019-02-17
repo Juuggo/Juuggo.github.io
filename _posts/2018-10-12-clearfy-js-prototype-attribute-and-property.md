@@ -1,5 +1,5 @@
 ---
-tags: [javscript, prototype,  front-end]
+tags: [javascript, prototype, front-end]
 title-split: clearfy / js prototype attribute / and property
 excerpt-separator: <!--more-->
 ---
@@ -72,4 +72,5 @@ console.log(userAccount.constructor); // Account()
 
 ***
 ## Reference
-[JavaScript Prototype in Plain Language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
+[JavaScript Prototype in Plain Language - JavaScript is Sexy](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
+
