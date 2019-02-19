@@ -1,0 +1,54 @@
+.deer-container.hide-bottom{
+    right:200px;
+    bottom:-20vh;
+}
+.contact{
+    height:82vh;
+    padding-top:0;
+    position:relative;
+}
+.contact ul{
+    height:80%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.contact>ul>li{
+    flex:1;
+    width:100%;
+    overflow:hidden;
+}
+.contact>ul>li>div{
+    height:90%;
+    border:2px solid var(--ui_green);
+    border-radius:5px;
+    position:relative;
+    margin:5px;
+}
+.contact>ul div p{
+    margin-left:10px;
+}
+.contact>ul div p:nth-child(2){
+    color:var(--ui_grey);
+    font-family:teko-regular;
+    font-size:24px;
+}
+.contact>ul img{
+    float:right;
+    margin-right:10px;
+    height:100%;
+    width:100px;
+    object-fit: contain;
+    cursor:pointer;
+}
+#max-qr{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    cursor:pointer;
+}
+#max-qr img{
+    box-shadow:-10px 10px 10px var(--ui_smoke);
+}

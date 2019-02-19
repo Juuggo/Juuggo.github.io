@@ -1,0 +1,11 @@
+- nav-name: homepage
+  nav-link: /#blog  
+
+- nav-name: welcome
+  nav-link: /
+
+- nav-name: tags
+  nav-link: /tag-index.html
+
+- nav-name: contact
+  nav-link: /contact.html  

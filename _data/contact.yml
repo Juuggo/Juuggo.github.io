@@ -1,0 +1,22 @@
+- name: E-mail 
+  value: Juuggo.c@gmail.com
+  image: /assets/images/gmail.png
+  itemlink: mailto:juuggo.c@gmail.com
+  title: Send me E-mail
+
+- name: Wechat
+  value: Please scan the QR code on the right side.
+  image: /assets/images/wechatqr.jpg
+  title: Zoom in the QR code
+
+- name: Telegram
+  value: <a href=https://t.me/juuggo>@juuggo</a>
+  image: /assets/images/telegram.png
+  itemlink: https://t.me/juuggo
+  title: Open Telegram chat with me
+
+- name: Resume
+  value: <a href=>Check my resume</a>
+  image: /assets/images/resume.png
+  itemlink: 
+  title: Check my resume

@@ -1,0 +1,12 @@
+<ul class="external-links no-point">
+    {% for item in site.data.external-links %}
+    <li><a class="hover" title="{{ item.title }}" href="{{ item.href }}">
+            <svg viewBox="0 0 {{ item.size }}">
+                <path d="{{ item.path }}
+                "/>
+            </svg>
+        </a>
+    </li>
+    {% endfor %}
+
+</ul>

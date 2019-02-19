@@ -1,0 +1,24 @@
+---
+layout: default
+title: Contact Me - Juuggo's Blog
+---
+<div class="contact center-content">
+    <ul>
+        {% for item in site.data.contact %}
+        <li>
+            <div>
+                {% if item.itemlink %}
+                <a href="{{ item.itemlink }}"><img src="{{ item.image }}" title="{{ item.title }}"></a>
+                {% else %}
+                    <img id="image-{{ item.name }}" title="{{ item.title }}" src="{{ item.image }}">
+                {% endif %}
+                <p>{{ item.name }}</p>
+                <p>{{ item.value }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div id="max-qr" class="hidden">
+        <img src="/assets/images/wechatqr.jpg">
+    </div>
+</div>
