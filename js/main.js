@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOMContentLoaded");
     // disable hover style on touch devices.
     document.addEventListener('touchstart', function(){
         let domsWithHover = document.getElementsByClassName('hover');
