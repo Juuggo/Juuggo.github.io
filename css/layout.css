@@ -108,8 +108,9 @@ ul.no-point{
     box-sizing:border-box;
     padding-left:40px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
+    overflow:auto;
 }
 .tag-item .item-tag-title{
     color:var(--ui_green);
@@ -163,6 +164,6 @@ ul.no-point{
     }
     .tag-item{
         width:100vw;
-        justify-content:center;
+        align-items:start;
     }
 }

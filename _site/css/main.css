@@ -73,7 +73,7 @@ h5{
     margin:18px 0;
     color:var(--ui_smoke);
 }
-pre.highlight{
+pre{
     padding:4px 0px 4px 16px;
     margin:16px 0;
     border:2px solid var(--ui_green);
