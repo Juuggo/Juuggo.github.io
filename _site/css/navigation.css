@@ -36,7 +36,7 @@ nav .menu{
     bottom:0px;    
     left:50%;
     right:0;
-    margin-bottom:48px;
+    margin-bottom:4vh;
     transform:translateX(-50%);
 }
 nav ul{

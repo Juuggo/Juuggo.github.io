@@ -13,11 +13,11 @@
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    list-style-type:none;
 }
 .contact>ul>li{
     flex:1;
     width:100%;
-    overflow:hidden;
 }
 .contact>ul>li>div{
     height:90%;
@@ -25,6 +25,10 @@
     border-radius:5px;
     position:relative;
     margin:5px;
+    overflow:hidden;
+}
+.contact>ul>li>div:last-of-type{
+    margin-bottom:6vh;
 }
 .contact>ul div p{
     margin-left:10px;

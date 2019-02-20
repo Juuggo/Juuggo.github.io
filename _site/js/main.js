@@ -7,14 +7,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+    function initMainPostList() {
+        let allPages = document.getElementById('main-post-list');
+        let totalPageNumber = document.getElementsByClassName('page').length;
+        let pageMapParent = document.getElementsByTagName('nav')[0];
+        mainPostList = new ScrollPages(totalPageNumber, allPages, pageMapParent);
+        mainPostList.init();
+    }
+
     // welcome page behaviour
     if (window.location.pathname === "/") {
         let enterBtn = document.getElementById('enter-blog');
-        let cover = document.getElementById('cover');
+        let cover = document.getElementById('welcome');
         if (window.location.hash === '#blog') {
             cover.style.display = 'none';
         }
         enterBtn.addEventListener('click', function() {
+            initMainPostList();
             window.location.hash='#blog';
             cover.style.top = -(mainPostList.viewHeight) + 'px';
         })
@@ -64,12 +73,8 @@ document.addEventListener("DOMContentLoaded", function() {
     deer.init();
 
     // object: mainPostList
-    if (window.location.pathname === "/") {
-        let allPages = document.getElementById('main-post-list');
-        let totalPageNumber = document.getElementsByClassName('page').length;
-        let pageMapParent = document.getElementsByTagName('nav')[0];
-        mainPostList = new ScrollPages(totalPageNumber, allPages, pageMapParent);
-        mainPostList.init();
+    if (window.location.hash === "#blog") {
+        initMainPostList();
     }
 
     // object: tagnav
