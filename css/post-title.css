@@ -6,6 +6,9 @@
     /* top:10%; */
     /* margin-left:10%; */
 }
+.post-title a{
+    text-decoration:none;
+}
 .post-title h2{
     color:black;
     font-family:teko-regular;

@@ -27,8 +27,8 @@
     margin:5px;
     overflow:hidden;
 }
-.contact>ul>li>div:last-of-type{
-    margin-bottom:6vh;
+.contact>ul>li:last-of-type{
+    margin-bottom:30vh;
 }
 .contact>ul div p{
     margin-left:10px;

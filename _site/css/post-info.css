@@ -32,7 +32,7 @@ ul.post-tag li{
 }
 .post-info a.read-more{
     position:absolute;
-    bottom:16px;
+    bottom:60px;
     color:var(--ui_green);
     font-family:teko-light;
     font-size:32px;
